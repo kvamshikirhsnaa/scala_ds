@@ -47,7 +47,7 @@ object NQueens extends App {
       nqt()
       .....
       .....
-    
+
      */
 
     def nQueensTailrec(currPosition: Int, currQueens: List[Int], solutions: List[List[Int]]): List[List[Int]] = {
@@ -60,6 +60,7 @@ object NQueens extends App {
       }
       else if (currQueens.length == n - 1) {
         val newSolution = currPosition :: currQueens
+        println(newSolution)
         nQueensTailrec(currPosition + 1, currQueens, newSolution :: solutions)
       }
       else {
