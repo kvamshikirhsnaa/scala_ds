@@ -90,6 +90,23 @@ object NQueens extends App {
       }
     }
 
+    /*
+       val top = (1 to n).map(_ => "_").mkString(".",".",".")
+       top: String = ._._._._.
+
+       val bottom = (0 until n).map(_ => "_").mkString("|","|","|")
+       bottom: String = |_|_|_|_|
+
+       top + bottom
+       res118: String = ._._._._.|_|_|_|_|
+
+       s"$top\n$bottom"
+       res120: String =
+       ._._._._.
+       |_|_|_|_|
+
+     */
+
     def prettyPrint(solutions: List[Int]): String = {
       val topEdge = (1 to n).map( _ => "_" ).mkString( ".", ".", "." ) // ._._._._.
       val rows = solutions.map { queen =>
