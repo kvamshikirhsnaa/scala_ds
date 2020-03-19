@@ -36,6 +36,7 @@ object Paranthesis extends App {
           ind <- 0 until str.length
         } yield {
           val (before, after) = str.splitAt(ind)
+          println(s"$before()$after")
           s"$before()$after"
         }
         genValidParensTailrec(nRemaining - 1, newString)
@@ -48,8 +49,8 @@ object Paranthesis extends App {
     println(generateValidParenthesis(1))
     println(generateValidParenthesis(2))
     println(generateValidParenthesis(3))
-    println(generateValidParenthesis(4))
-    println(generateValidParenthesis(10))
+    // println(generateValidParenthesis(4))
+    // println(generateValidParenthesis(10))
 
   }
 
